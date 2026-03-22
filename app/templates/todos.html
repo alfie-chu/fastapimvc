@@ -6,10 +6,12 @@
     .todo-item {
         transition: all 0.2s;
     }
+
     .todo-item.completed {
         opacity: 0.6;
         text-decoration: line-through;
     }
+
     .todo-form {
         background: #f8f9fa;
         padding: 1rem;
@@ -35,7 +37,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="title" class="form-label">Title *</label>
+                                    <label for="title" class="form-label">Title</label>
                                     <input type="text" class="form-control" id="title" name="title" required>
                                 </div>
                             </div>
@@ -82,7 +84,6 @@
                             {% endfor %}
                         </div>
 
-                        <!-- Pagination -->
                         {% if pagination.total_pages > 1 %}
                             <nav aria-label="Todo pagination" class="mt-3">
                                 <ul class="pagination justify-content-center">
@@ -111,7 +112,7 @@
                             </nav>
                         {% endif %}
                     {% else %}
-                        <p class="text-muted">No todos yet. Add your first todo above!</p>
+                        <p class="text-muted">No todos added. Create your first todo above.</p>
                     {% endif %}
                 </div>
             </div>
